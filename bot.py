@@ -1,6 +1,11 @@
+import os
+from dotenv import load_dotenv
 import discord
 import requests
 import json 
+
+load_dotenv()
+TOKEN = os.getenv("DISCORD_TOKEN")
 
 def get_meme():
     response = requests.get('https://meme-api.com/gimme')
@@ -25,5 +30,5 @@ intents = discord.Intents.default()
 intents.message_content = True 
 
 client = MyClient(intents=intents)
-client.run("MTU3Mjk5NjEwMjIzMDExODUyMQ.GxYdVf.kIIhl0e-SwqNh7GxU1uStZFhFrbu8jyTM06skU")
+client.run(TOKEN)
 
