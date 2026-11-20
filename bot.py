@@ -43,7 +43,13 @@ client = MyClient(intents=intents)
 async def hello(interaction: discord.Interaction):
     await interaction.response.send_message("Hello World!")
 
+@client.tree.command(name="meme", description="Sends a random meme")
+async def meme(interaction: discord.Interaction):
+    await interaction.response.send_message(get_meme())
 
+@client.tree.command(name="ping", description="Pings the bot")
+async def ping(interaction: discord.Interaction):
+    await interaction.response.send_message(f"Pong! Latency: {round(client.latency * 1000)}ms")
 
 client.run(TOKEN)
 
