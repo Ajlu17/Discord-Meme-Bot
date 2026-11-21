@@ -4,12 +4,14 @@ I built this Discord bot as the final project for my first Python course at Cod�
 
 ## Commands
 
+You can run every command with `/` or `$`.
+
 | Command | What it does |
 | --- | --- |
 | `/hello` or `$hello` | Replies with “Hello World!” |
 | `/meme` or `$meme` | Sends a link to a random meme from Meme API. |
-| `/ping` | Replies with “Pong!” and shows the bot’s connection latency to Discord in milliseconds. |
-| `/embed` | Sends an embedded message with a title, a description, and a blue sidebar. |
+| `/ping` or `$ping` | Replies with “Pong!” and shows the bot’s connection latency to Discord in milliseconds. |
+| `/embed` or `$embed` | Sends an embedded message with a title, a description, and a blue sidebar. |
 
 ## How to run it
 
@@ -37,7 +39,7 @@ You’ll need Python 3 and permission to add the bot to a Discord server.
    python bot.py
    ```
 
-   When you see `Logged as ...!` in the terminal, try `/hello` in a channel on your server.
+   When you see `Logged as ...!` in the terminal, try `/hello` or `$hello` in a channel on your server.
 
 ## What I practiced
 
