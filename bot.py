@@ -51,5 +51,15 @@ async def meme(interaction: discord.Interaction):
 async def ping(interaction: discord.Interaction):
     await interaction.response.send_message(f"Pong! Latency: {round(client.latency * 1000)}ms")
 
+@client.tree.command(name="embed", description="Sends an embedded message")
+async def embed(interaction: discord.Interaction):
+
+    embed = discord.Embed(title="Embedded Message", 
+    description="This is an embedded message.", 
+    color=discord.Color.blue()
+    )
+
+    await interaction.response.send_message(embed=embed)
+
 client.run(TOKEN)
 
