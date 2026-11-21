@@ -33,6 +33,16 @@ class MyClient(discord.Client):
 
         if message.content.startswith("$meme"):
             await message.channel.send(get_meme())
+        
+        if message.content.startswith("$ping"):
+            await message.channel.send(f"Pong! Latency: {round(self.latency * 1000)}ms")
+
+        if message.content.startswith("$embed"):
+            embed = discord.Embed(title="Embedded Message", 
+            description="This is an embedded message.", 
+            color=discord.Color.blue()
+            )
+            await message.channel.send(embed=embed)
 
 intents = discord.Intents.default()
 intents.message_content = True 
